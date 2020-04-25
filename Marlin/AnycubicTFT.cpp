@@ -1165,7 +1165,7 @@ void AnycubicTFTClass::GetCommandFromTFT()
           case 23: // A23 preheat pla
             if((!planner.movesplanned())&& (TFTstate!=ANYCUBIC_TFT_STATE_SDPAUSE) && (TFTstate!=ANYCUBIC_TFT_STATE_SDOUTAGE))
             {
-              if((current_position[Z_AXIS]<10)) enqueue_and_echo_commands_P(PSTR("G1 Z10")); // RAISE Z AXIS
+              //if((current_position[Z_AXIS]<10)) enqueue_and_echo_commands_P(PSTR("G1 Z10")); // RAISE Z AXIS
               thermalManager.setTargetBed(50);
               thermalManager.setTargetHotend(170, 0);
               ANYCUBIC_SERIAL_SUCC_START;
@@ -1175,7 +1175,7 @@ void AnycubicTFTClass::GetCommandFromTFT()
           case 24:// A24 preheat abs
             if((!planner.movesplanned()) && (TFTstate!=ANYCUBIC_TFT_STATE_SDPAUSE) && (TFTstate!=ANYCUBIC_TFT_STATE_SDOUTAGE))
             {
-              if((current_position[Z_AXIS]<10)) enqueue_and_echo_commands_P(PSTR("G1 Z10")); //RAISE Z AXIS
+              //if((current_position[Z_AXIS]<10)) enqueue_and_echo_commands_P(PSTR("G1 Z10")); //RAISE Z AXIS
               thermalManager.setTargetBed(80);
               thermalManager.setTargetHotend(180, 0);
 

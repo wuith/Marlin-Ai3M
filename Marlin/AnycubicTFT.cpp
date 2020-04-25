@@ -425,7 +425,7 @@ void AnycubicTFTClass::HandleSpecialMenu()
     buzzer.tone(210, 1108);
   } else if (strcmp(SelectedDirectory, "<preheat bed>")==0) {
     SERIAL_PROTOCOLLNPGM("Special Menu: Preheat Bed");
-    enqueue_and_echo_commands_P(PSTR("M140 S60"));
+    enqueue_and_echo_commands_P(PSTR("M140 S70"));
   } else if (strcmp(SelectedDirectory, "<start mesh leveling>")==0) {
     SERIAL_PROTOCOLLNPGM("Special Menu: Start Mesh Leveling");
     enqueue_and_echo_commands_P(PSTR("G29 S1"));

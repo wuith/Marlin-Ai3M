@@ -1050,7 +1050,7 @@ void AnycubicTFTClass::GetCommandFromTFT()
               else if((CodeSeen('C'))&&(!planner.movesplanned()))
               {
                 if((current_position[Z_AXIS]<10))
-                enqueue_and_echo_commands_P(PSTR("G1 Z10")); //RASE Z AXIS
+                //enqueue_and_echo_commands_P(PSTR("G1 Z10")); //RASE Z AXIS
                 tempvalue=constrain(CodeValue(),0,275);
                 thermalManager.setTargetHotend(tempvalue,0);
               }
